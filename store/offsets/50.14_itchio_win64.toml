@@ -1,0 +1,18 @@
+[metadata]
+name = "dfint localization hook offsets"
+version = "50.14 itch.io win64"
+checksum = 0x66D866D6
+
+[offsets]
+string_copy_n = 0xD4A0
+string_append_n = 0xD5E0
+std_string_ctor = 0x1A8C0
+addst = 0x85D050
+addst_top = 0x85D130
+addst_flag = 0x85CF60
+standardstringentry = 0x968550
+simplify_string = 0x40A9B0
+upper_case_string = 0x40ACF0
+lower_case_string = 0x40AB50
+capitalize_string_words = 0x40AE90
+capitalize_string_first_word = 0x40B120
