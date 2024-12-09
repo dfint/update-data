@@ -1,0 +1,21 @@
+[metadata]
+name = "dfint localization hook offsets"
+version = "51.01-beta27 steam linux"
+checksum = 0xca6af01a
+
+[offsets]
+utf_input = 0x38d
+
+[symbols]
+enabler = ["self", "enabler"]
+std_string_append = ["self", "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc"]
+std_string_assign = ["self", "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEPKc"]
+addst = ["libg_src_lib.so", "_ZN9graphicst5addstERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13justificationi"]
+addst_top = ["libg_src_lib.so", "_ZN9graphicst9top_addstERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13justificationi"]
+addst_flag = ["libg_src_lib.so", "_ZN9graphicst10addst_flagERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13justificationij"]
+standardstringentry = ["libg_src_lib.so", "_Z19standardstringentryRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEijRSt3setIlSt4lessIlESaIlEEPKc"]
+simplify_string = ["libg_src_lib.so", "_Z15simplify_stringRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"]
+upper_case_string = ["libg_src_lib.so", "_Z17upper_case_stringRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"]
+lower_case_string = ["libg_src_lib.so", "_Z17lower_case_stringRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"]
+capitalize_string_words = ["libg_src_lib.so", "_Z23capitalize_string_wordsRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"]
+capitalize_string_first_word = ["libg_src_lib.so", "_Z28capitalize_string_first_wordRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"]
