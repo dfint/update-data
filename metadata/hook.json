@@ -1,0 +1,317 @@
+[
+  {
+    "df": 1695011268,
+    "checksum": 2522524393,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.0/hook_0.1.0.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.10_classic_win64.toml"
+  },
+  {
+    "df": 1695008478,
+    "checksum": 2674263916,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.0/hook_0.1.0.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.10_itchio_win64.toml"
+  },
+  {
+    "df": 1695006380,
+    "checksum": 1663178750,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.0/hook_0.1.0.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.10_steam_win64.toml"
+  },
+  {
+    "df": 1408469667,
+    "checksum": 1052183768,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.0/hook_0.1.0.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.10_classic_linux64.toml"
+  },
+  {
+    "df": 2153814425,
+    "checksum": 234720148,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.0/hook_0.1.0.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.10_itchio_linux64.toml"
+  },
+  {
+    "df": 1696135234,
+    "checksum": 1774425961,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_steam_win64.toml"
+  },
+  {
+    "df": 1696136250,
+    "checksum": 179694866,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_itchio_win64.toml"
+  },
+  {
+    "df": 1696138628,
+    "checksum": 3355982986,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_classic_win64.toml"
+  },
+  {
+    "df": 26452769,
+    "checksum": 377059659,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_classic_linux64.toml"
+  },
+  {
+    "df": 3379072297,
+    "checksum": 3258751538,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_itchio_linux64.toml"
+  },
+  {
+    "df": 1828862929,
+    "checksum": 1524073430,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.1/hook_0.1.1.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.11_steam_linux64.toml"
+  },
+  {
+    "df": 1709713517,
+    "checksum": 4279770587,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_steam_win64.toml"
+  },
+  {
+    "df": 1709717368,
+    "checksum": 3260073824,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_itchio_win64.toml"
+  },
+  {
+    "df": 1709719983,
+    "checksum": 1252038596,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_classic_win64.toml"
+  },
+  {
+    "df": 768338988,
+    "checksum": 1362246709,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_steam_linux64.toml"
+  },
+  {
+    "df": 1394744997,
+    "checksum": 2485992474,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_itchio_linux64.toml"
+  },
+  {
+    "df": 445643784,
+    "checksum": 2033518382,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.12_classic_linux64.toml"
+  },
+  {
+    "df": 1713726302,
+    "checksum": 1558398659,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_steam_win64.toml"
+  },
+  {
+    "df": 1713730104,
+    "checksum": 2055247035,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_classic_win64.toml"
+  },
+  {
+    "df": 1571398539,
+    "checksum": 642309136,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_steam_linux64.toml"
+  },
+  {
+    "df": 1154905022,
+    "checksum": 2875888758,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_classic_linux64.toml"
+  },
+  {
+    "df": 1713728445,
+    "checksum": 1318875313,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_itchio_win64.toml"
+  },
+  {
+    "df": 323613002,
+    "checksum": 1235997861,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.13_itchio_linux64.toml"
+  },
+  {
+    "df": 1725464066,
+    "checksum": 1935540982,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_steam_win64.toml"
+  },
+  {
+    "df": 2840442142,
+    "checksum": 2763877026,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_steam_linux64.toml"
+  },
+  {
+    "df": 1725458134,
+    "checksum": 1537331023,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_itchio_win64.toml"
+  },
+  {
+    "df": 1477479480,
+    "checksum": 2442401399,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_itchio_linux64.toml"
+  },
+  {
+    "df": 1725459945,
+    "checksum": 960012081,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_classic_win64.toml"
+  },
+  {
+    "df": 4097662057,
+    "checksum": 1053864522,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.14_classic_linux64.toml"
+  },
+  {
+    "df": 1727724030,
+    "checksum": 2027684989,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta23_steam_win64.toml"
+  },
+  {
+    "df": 1552069704,
+    "checksum": 1930718062,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta23_steam_linux64.toml"
+  },
+  {
+    "df": 1729698729,
+    "checksum": 2357509858,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta24_steam_win64.toml"
+  },
+  {
+    "df": 1015003629,
+    "checksum": 2543681886,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta24_steam_linux64.toml"
+  },
+  {
+    "df": 1729791290,
+    "checksum": 4035064348,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta25_steam_win64.toml"
+  },
+  {
+    "df": 2402348858,
+    "checksum": 2789576974,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta25_steam_linux64.toml"
+  },
+  {
+    "df": 1732706491,
+    "checksum": 123082408,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta26_steam_win64.toml"
+  },
+  {
+    "df": 989393355,
+    "checksum": 708906960,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta26_steam_linux64.toml"
+  },
+  {
+    "df": 1733153506,
+    "checksum": 2584880718,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta27_steam_win64.toml"
+  },
+  {
+    "df": 3396005914,
+    "checksum": 1174660210,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.01-beta27_steam_linux64.toml"
+  },
+  {
+    "df": 1733940061,
+    "checksum": 3045199369,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_steam_win64.toml"
+  },
+  {
+    "df": 1733947560,
+    "checksum": 1866780484,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_classic_win64.toml"
+  },
+  {
+    "df": 3065067904,
+    "checksum": 660988090,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_steam_linux64.toml"
+  },
+  {
+    "df": 4034496715,
+    "checksum": 1484501727,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_classic_linux64.toml"
+  },
+  {
+    "df": 1733942734,
+    "checksum": 692377784,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_itchio_win64.toml"
+  },
+  {
+    "df": 4291452751,
+    "checksum": 3998822792,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.1.3/hook_0.1.3.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/50.15_itchio_linux64.toml"
+  }
+]
