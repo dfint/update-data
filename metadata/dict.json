@@ -84,7 +84,7 @@
     "csv": "https://raw.githubusercontent.com/dfint/autobuild/main/translation_build/csv_with_objects/Ukrainian/dfint_dictionary.csv",
     "font": "https://raw.githubusercontent.com/dfint/update-data/main/store/fonts/cp866u.png",
     "encoding": "https://raw.githubusercontent.com/dfint/update-data/main/store/encodings/cp866u.toml",
-    "checksum": 1751488672
+    "checksum": 4212177430
   },
   {
     "language": "Japanese (Romaji)",
