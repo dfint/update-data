@@ -1,8 +1,7 @@
-# /// script
-# requires-python = ">=3.12"
 # dependencies = [
 #     "requests",
 #     "toml",
+#     "natsort",
 # ]
 # ///
 import json
@@ -11,6 +10,7 @@ from pathlib import Path
 from typing import Any, Iterator, NamedTuple
 
 import toml
+from natsort import natsorted
 
 from utils import get_from_url
 
@@ -92,13 +92,13 @@ def get_metadata_entries_from_files() -> Iterator[tuple[int, str]]:
 def main() -> None:
     existing_checksums = get_existing_df_checksums()
     checksum_to_file_map = dict(get_metadata_entries_from_files())
-    missing_entries = sorted(set(checksum_to_file_map) - existing_checksums)
+    missing_checksums = set(checksum_to_file_map) - existing_checksums
+    missing_files = natsorted(map(checksum_to_file_map.get, missing_checksums))
 
-    print("New entries:", missing_entries)
+    print("New entries:", missing_files)
     config = toml.load(base_dir / "automation/hook_manifest_add.toml")
 
-    for checksum in missing_entries:
-        file_name = checksum_to_file_map[checksum]
+    for file_name in missing_files:
         operating_system = Path(file_name).stem.rpartition("_")[2]
         lib_variant = config[operating_system]
         add_maifest_entry(
