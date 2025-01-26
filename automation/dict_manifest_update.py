@@ -1,9 +1,3 @@
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "requests",
-# ]
-# ///
 import binascii
 import json
 from pathlib import Path

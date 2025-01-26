@@ -1,0 +1,20 @@
+[project]
+name = "automation"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alternative-encodings>=0.3.1",
+    "natsort>=8.4.0",
+    "requests>=2.32.3",
+    "toml>=0.10.2",
+]
+
+[tool.uv.sources]
+alternative-encodings = { index = "dfint" }
+
+[[tool.uv.index]]
+name = "dfint"
+url = "https://dfint.github.io/pypi-index/"
+priority = "explicit"

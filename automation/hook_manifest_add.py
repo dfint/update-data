@@ -1,9 +1,3 @@
-# dependencies = [
-#     "requests",
-#     "toml",
-#     "natsort",
-# ]
-# ///
 import json
 from binascii import crc32
 from pathlib import Path

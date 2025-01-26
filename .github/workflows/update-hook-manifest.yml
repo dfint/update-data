@@ -39,11 +39,11 @@ jobs:
         with:
           version: "latest"
 
-      - name: Update checksums in the hook manifest
-        run: uv run automation/hook_manifest_update.py
-
-      - name: Add new offset files to the hook manifest
-        run: uv run automation/hook_manifest_add.py
+      - name: Run update scripts
+        run: |
+          cd automation
+          uv run hook_manifest_update.py
+          uv run hook_manifest_add.py
 
       - name: Commit changes
         if: ${{ !contains(fromJSON('["pull_request"]'), github.event_name) }}

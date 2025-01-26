@@ -38,7 +38,9 @@ jobs:
           version: "latest"
 
       - name: Run update script
-        run: uv run automation/dict_manifest_update.py
+        run: |
+          cd automation
+          uv run dict_manifest_update.py
 
       - name: Commit changes
         if: ${{ !contains(fromJSON('["pull_request"]'), github.event_name) }}
