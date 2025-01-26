@@ -79,21 +79,32 @@ def get_file_name(url: str) -> str:
     return url.rpartition("/")[2]
 
 
-def get_offsets_in_json() -> set[str]:
+class MetadataEntryKey(NamedTuple):
+    file_name: str
+    df_checksum: int
+
+
+def get_existing_metadata_entries() -> set[MetadataEntryKey]:
     json_data = json.loads(hook_json_path.read_text(encoding="utf-8"))
-    return {get_file_name(item["offsets"]) for item in json_data}
+    return {MetadataEntryKey(get_file_name(item["offsets"]), item["df"]) for item in json_data}
+
+
+def get_metadata_entries_from_files() -> Iterator[MetadataEntryKey]:
+    for file in offsets_toml_path.glob("*.toml"):
+        file_data = toml.load(file)
+        yield MetadataEntryKey(file.name, file_data["metadata"]["checksum"])
 
 
 def autoadd() -> None:
     json_data = hook_json_path.read_text(encoding="utf-8")
-    offset_files_in_json = get_offsets_in_json()
-    offset_files = {file.name for file in offsets_toml_path.glob("*.toml")}
-    missing_offsets = natsorted(offset_files - offset_files_in_json)
+    existing = get_existing_metadata_entries()
+    in_files = set(get_metadata_entries_from_files())
+    missing_entries = natsorted(in_files - existing)
     
-    print("New offset files:", missing_offsets)
+    print("New entries:", missing_entries)
     config = toml.load(base_dir / "automation/hook_manifest_add.toml")
-    
-    for file_name in missing_offsets:
+
+    for file_name, _ in missing_entries:
         operating_system = Path(file_name).stem.rpartition("_")[2]
         lib_variant = config[operating_system]
         main(
