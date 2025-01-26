@@ -3,7 +3,6 @@
 # dependencies = [
 #     "requests",
 #     "toml",
-#     "natsort",
 # ]
 # ///
 import json
@@ -12,7 +11,6 @@ from pathlib import Path
 from typing import Any, Iterator, NamedTuple
 
 import toml
-from natsort import natsorted
 
 from utils import get_from_url
 
@@ -53,7 +51,7 @@ def add_info_to_manifest(manifest_path: str, config_item: ConfigItem) -> None:
     manifest_path.write_text(json.dumps(hook_manifest, indent=2))
 
 
-def main(hook_lib_url: str, config_file_name: str, offsets_file_name: str, dfhooks_url: str) -> None:
+def add_maifest_entry(hook_lib_url: str, config_file_name: str, offsets_file_name: str, dfhooks_url: str) -> None:
     res_hook = get_from_url(hook_lib_url)
     res_config = (config_path / config_file_name).read_bytes()
     res_offsets = (offsets_toml_path / offsets_file_name).read_bytes()
@@ -80,35 +78,30 @@ def get_file_name(url: str) -> str:
     return url.rpartition("/")[2]
 
 
-class MetadataEntryKey(NamedTuple):
-    file_name: str
-    df_checksum: int
-
-
-def get_existing_metadata_entries() -> set[MetadataEntryKey]:
+def get_existing_df_checksums() -> set[int]:
     json_data = json.loads(hook_json_path.read_text(encoding="utf-8"))
-    return {MetadataEntryKey(get_file_name(item["offsets"]), item["df"]) for item in json_data}
+    return {item["df"] for item in json_data}
 
 
-def get_metadata_entries_from_files() -> Iterator[MetadataEntryKey]:
+def get_metadata_entries_from_files() -> Iterator[tuple[int, str]]:
     for file in offsets_toml_path.glob("*.toml"):
         file_data = toml.load(file)
-        yield MetadataEntryKey(file.name, file_data["metadata"]["checksum"])
+        yield file_data["metadata"]["checksum"], file.name
 
 
-def autoadd() -> None:
-    json_data = hook_json_path.read_text(encoding="utf-8")
-    existing = get_existing_metadata_entries()
-    in_files = set(get_metadata_entries_from_files())
-    missing_entries = natsorted(in_files - existing)
-    
+def main() -> None:
+    existing_checksums = get_existing_df_checksums()
+    checksum_to_file_map = dict(get_metadata_entries_from_files())
+    missing_entries = sorted(set(checksum_to_file_map) - existing_checksums)
+
     print("New entries:", missing_entries)
     config = toml.load(base_dir / "automation/hook_manifest_add.toml")
 
-    for file_name, _ in missing_entries:
+    for checksum in missing_entries:
+        file_name = checksum_to_file_map[checksum]
         operating_system = Path(file_name).stem.rpartition("_")[2]
         lib_variant = config[operating_system]
-        main(
+        add_maifest_entry(
             lib_download_base_url + lib_variant["lib"],
             "config.toml",
             file_name,
@@ -117,4 +110,4 @@ def autoadd() -> None:
 
 
 if __name__ == "__main__":
-    autoadd()
+    main()
