@@ -1,5 +1,4 @@
-from collections import defaultdict
-from typing import Iterable, Iterator, Mapping, NamedTuple, Optional
+from typing import Iterable, Iterator, NamedTuple, Optional
 
 from alternative_encodings import cp859
 

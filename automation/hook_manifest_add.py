@@ -9,10 +9,11 @@
 import json
 from binascii import crc32
 from pathlib import Path
-from typing import Any, NamedTuple
-from natsort import natsorted
+from typing import Any, Iterator, NamedTuple
 
 import toml
+from natsort import natsorted
+
 from utils import get_from_url
 
 base_dir = Path(__file__).parent.parent  # base directory of the repository

@@ -10,6 +10,7 @@ from pathlib import Path
 
 from utils import get_from_url
 
+
 def main():
     base_dir = Path(__file__).parent.parent  # base directory of the repository
     dict_json_path = base_dir / "metadata/dict.json"
