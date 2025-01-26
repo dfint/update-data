@@ -465,7 +465,7 @@
   },
   {
     "df": 1733942734,
-    "checksum": 3869814253,
+    "checksum": 1301364469,
     "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.2.0/hook_0.2.0.dll",
     "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
     "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.03_itchio_win64.toml",
