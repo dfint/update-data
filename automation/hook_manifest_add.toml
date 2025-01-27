@@ -1,7 +1,7 @@
 [win64]
-lib = "0.2.0/hook_0.2.0.dll"
+lib = "0.2.1/hook_0.2.1.dll"
 dfhooks = "v1/dfhooks.dll"
 
 [linux64]
-lib = "0.2.0/hook_0.2.0.so"
+lib = "0.2.1/hook_0.2.1.so"
 dfhooks = "v1/libdfhooks.so"
