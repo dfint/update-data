@@ -13,7 +13,7 @@
     "csv": "https://raw.githubusercontent.com/dfint/autobuild/main/translation_build/csv_with_objects/Czech/dfint_dictionary.csv",
     "font": "https://raw.githubusercontent.com/dfint/update-data/main/store/fonts/cp852.png",
     "encoding": "https://raw.githubusercontent.com/dfint/update-data/main/store/encodings/cp852.toml",
-    "checksum": 2523118813
+    "checksum": 1050861171
   },
   {
     "language": "Deutsch",
@@ -53,7 +53,7 @@
     "csv": "https://raw.githubusercontent.com/dfint/autobuild/main/translation_build/csv_with_objects/Polish/dfint_dictionary.csv",
     "font": "https://raw.githubusercontent.com/dfint/update-data/main/store/fonts/cp852.png",
     "encoding": "https://raw.githubusercontent.com/dfint/update-data/main/store/encodings/cp852.toml",
-    "checksum": 1320665280
+    "checksum": 53783203
   },
   {
     "language": "Português (Brasil)",
