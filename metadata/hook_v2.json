@@ -662,5 +662,21 @@
     "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
     "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.11_steam_win64.toml",
     "dfhooks": "https://github.com/DFHack/dfhooks/releases/download/v1/dfhooks.dll"
+  },
+  {
+    "df": 995831553,
+    "checksum": 1622581706,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.2.1/hook_0.2.1.so",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.12_classic_linux64.toml",
+    "dfhooks": "https://github.com/DFHack/dfhooks/releases/download/v1/libdfhooks.so"
+  },
+  {
+    "df": 1750927255,
+    "checksum": 2007152055,
+    "lib": "https://github.com/dfint/df-steam-hook-rs/releases/download/0.2.1/hook_0.2.1.dll",
+    "config": "https://raw.githubusercontent.com/dfint/update-data/main/store/config.toml",
+    "offsets": "https://raw.githubusercontent.com/dfint/update-data/main/store/offsets/51.12_classic_win64.toml",
+    "dfhooks": "https://github.com/DFHack/dfhooks/releases/download/v1/dfhooks.dll"
   }
 ]
