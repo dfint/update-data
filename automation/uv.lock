@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 [[package]]
 name = "alternative-encodings"
 version = "0.3.1"
-source = { registry = "https://dfint.github.io/pypi-index" }
+source = { registry = "https://dfint.github.io/pypi-index/" }
 dependencies = [
     { name = "cutlet" },
     { name = "fugashi", extra = ["unidic-lite"] },
@@ -27,7 +27,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "alternative-encodings", specifier = ">=0.3.1", index = "https://dfint.github.io/pypi-index" },
+    { name = "alternative-encodings", specifier = ">=0.3.1", index = "https://dfint.github.io/pypi-index/" },
     { name = "natsort", specifier = ">=8.4.0" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "toml", specifier = ">=0.10.2" },
