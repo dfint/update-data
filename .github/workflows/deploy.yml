@@ -25,7 +25,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Prepare to deploy
       run: |
@@ -44,10 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Download artifact
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v5
       with:
         name: update-data
         path: deploy
@@ -65,7 +65,7 @@ jobs:
   #   needs: prepare
   #   steps:
   #   - name: Download artifact
-  #     uses: actions/download-artifact@v4
+  #     uses: actions/download-artifact@v5
   #     with:
   #       name: update-data
   #       path: deploy
