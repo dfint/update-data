@@ -51,6 +51,7 @@ jobs:
       with:
         name: update-data
         path: deploy
+        include-hidden-file: true
 
     - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@v4
