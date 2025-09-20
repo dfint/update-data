@@ -16,7 +16,7 @@ config_path = base_dir / "store"
 
 offsets_base_url = "https://dfint.github.io/update-data/store/offsets/"
 lib_download_base_url = "https://dfint.github.io/update-data/store/libs/hook/"
-dfhooks_download_base_url = "https://github.com/DFHack/dfhooks/releases/download/"
+dfhooks_download_base_url = "https://dfint.github.io/update-data/store/libs/dfhooks/"
 config_base_url = "https://dfint.github.io/update-data/store/"
 
 
