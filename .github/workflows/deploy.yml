@@ -8,7 +8,7 @@ on:
     paths:
       - '.github/workflows/deploy.yml'
       - 'metadata/*'
-      - 'store/*'
+      - 'store/**'
 
   workflow_run:
     workflows: 
