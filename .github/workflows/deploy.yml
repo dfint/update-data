@@ -61,6 +61,41 @@ jobs:
         folder: deploy
         single-commit: true
 
+  deploy_to_gitverse:
+    runs-on: ubuntu-latest
+    needs: deploy_to_gh_pages
+    steps:
+    # - uses: actions/checkout@v5
+
+    - name: Download artifact
+      uses: actions/download-artifact@v5
+      with:
+        name: update-data
+        path: deploy
+
+    - name: Clone Gitverse mirror
+      run: |
+        git clone https://gitverse.ru/dfint/data-mirror.git
+        cd data-mirror
+        rm -rf autobuild
+        rm -rf update-data
+
+    - name: Prepare data from autobuild
+      run: |
+        wget https://github.com/dfint/autobuild/archive/refs/heads/gh-pages.zip
+        unzip gh-pages.zip
+        cp --recursive translation_build/ update-data/translation_build
+
+    - name: Commit
+      run: |
+        cd data-mirror
+        git add .
+        git commit -m "Update data"
+
+    - name: Push to gitverse
+      run: |
+        git push
+
   # deploy_to_s3:
   #   runs-on: ubuntu-latest
   #   needs: prepare
