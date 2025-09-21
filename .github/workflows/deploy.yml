@@ -92,13 +92,14 @@ jobs:
         cp --recursive deploy/store/ data-mirror/update-data/store
 
     - name: Commit and push (if needed)
-      if: ${ git diff --exit-code }
       run: |
-        cd data-mirror
-        git add .
-        git config user.name "update-bot"
-        git config user.email "update-bot"
-        git commit -m "Update data"
+        if [ git diff --exit-code ]; then
+          cd data-mirror
+          git add .
+          git config user.name "update-bot"
+          git config user.email "update-bot"
+          git commit -m "Update data"
+        fi
 
     - name: Push to Gitverse
       run: |
