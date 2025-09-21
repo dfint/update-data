@@ -101,6 +101,7 @@ jobs:
 
     - name: Push to gitverse
       run: |
+        cd data-mirror
         git config user.name "update-bot"
         git config user.email "update-bot"
         git config user.password "test"
