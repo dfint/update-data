@@ -99,13 +99,8 @@ jobs:
           git config user.name "update-bot"
           git config user.email "update-bot"
           git commit -m "Update data"
+          git push
         fi
-
-    - name: Push to Gitverse
-      run: |
-        cd data-mirror
-        git push
-        true
 
   # deploy_to_s3:
   #   runs-on: ubuntu-latest
