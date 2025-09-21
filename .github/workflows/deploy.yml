@@ -93,8 +93,8 @@ jobs:
 
     - name: Commit and push (if needed)
       run: |
+        cd data-mirror
         if ! git diff --exit-code; then
-          cd data-mirror
           git add .
           git config user.name "update-bot"
           git config user.email "update-bot"
