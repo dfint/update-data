@@ -84,7 +84,7 @@ jobs:
       run: |
         wget https://github.com/dfint/autobuild/archive/refs/heads/gh-pages.zip
         unzip gh-pages.zip
-        cp --recursive autobuild-gh-pages/translation_build/ update-data/autobuild/translation_build
+        cp --recursive autobuild-gh-pages/translation_build/ data-mirror/autobuild/translation_build
 
     - name: Commit
       run: |
