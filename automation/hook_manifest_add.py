@@ -10,25 +10,39 @@ from utils import get_from_url
 
 base_dir = Path(__file__).parent.parent  # base directory of the repository
 
-hook_json_path = base_dir / "metadata/hook_v2.json"
+hook_v2_json_path = base_dir / "metadata/hook_v2.json"
+hook_v3_json_path = base_dir / "metadata/hook_v3.json"
 offsets_toml_path = base_dir / "store/offsets"
 config_path = base_dir / "store"
 
-offsets_base_url = "https://dfint.github.io/update-data/store/offsets/"
-lib_download_base_url = "https://dfint.github.io/update-data/store/libs/hook/"
-dfhooks_download_base_url = "https://dfint.github.io/update-data/store/libs/dfhooks/"
-config_base_url = "https://dfint.github.io/update-data/store/"
+DEFAULT_MIRROR = "https://dfint.github.io"
+
+offsets_base_url = "/update-data/store/offsets/"
+lib_download_base_url = "/update-data/store/libs/hook/"
+dfhooks_download_base_url = "/update-data/store/libs/dfhooks/"
+config_base_url = "/update-data/store/"
 
 
 class ConfigItem(NamedTuple):
     df_checksum: str
     payload_checksum: int
     hook_lib_url: str
+    defatult_mirror: str
     config_url: str
     offsets_url: str
     dfhooks_url: str
     
-    def dict(self) -> dict[str, Any]:
+    def dict_v2(self) -> dict[str, Any]:
+        return {
+            "df": self.df_checksum,
+            "checksum": self.payload_checksum,
+            "lib": self.hook_lib_url,
+            "config": DEFAULT_MIRROR + self.config_url,
+            "offsets": DEFAULT_MIRROR + self.offsets_url,
+            "dfhooks": DEFAULT_MIRROR + self.dfhooks_url,
+        }
+
+    def dict_v3(self) -> dict[str, Any]:
         return {
             "df": self.df_checksum,
             "checksum": self.payload_checksum,
@@ -39,9 +53,9 @@ class ConfigItem(NamedTuple):
         }
 
 
-def add_info_to_manifest(manifest_path: str, config_item: ConfigItem) -> None:
+def add_info_to_manifest(manifest_path: str, config_item: dict[str, Any]) -> None:
     hook_manifest = json.loads(manifest_path.read_text())
-    hook_manifest.append(config_item.dict())
+    hook_manifest.append(config_item)
     manifest_path.write_text(json.dumps(hook_manifest, indent=2))
 
 
@@ -55,16 +69,23 @@ def add_maifest_entry(hook_lib_url: str, config_file_name: str, offsets_file_nam
     df_checksum = offsets_data["metadata"]["checksum"]
     payload_checksum = crc32(res_hook + res_config + res_offsets + res_dfhooks)
 
+    config_item = ConfigItem(
+        df_checksum,
+        payload_checksum,
+        hook_lib_url,
+        config_base_url + config_file_name,
+        offsets_base_url + offsets_file_name,
+        dfhooks_url,
+    )
+
     add_info_to_manifest(
-        hook_json_path,
-        ConfigItem(
-            df_checksum,
-            payload_checksum,
-            hook_lib_url,
-            config_base_url + config_file_name,
-            offsets_base_url + offsets_file_name,
-            dfhooks_url,
-        )
+        hook_v2_json_path,
+        config_item.dict_v2(),
+    )
+
+    add_info_to_manifest(
+        hook_v3_json_path,
+        config_item.dict_v3(),
     )
 
 
@@ -73,7 +94,7 @@ def get_file_name(url: str) -> str:
 
 
 def get_existing_df_checksums() -> set[int]:
-    json_data = json.loads(hook_json_path.read_text(encoding="utf-8"))
+    json_data = json.loads(hook_v2_json_path.read_text(encoding="utf-8"))
     return {item["df"] for item in json_data}
 
 
