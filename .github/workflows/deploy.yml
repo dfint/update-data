@@ -82,11 +82,16 @@ jobs:
 
     - name: Prepare data from autobuild
       run: |
-        pwd
         wget https://github.com/dfint/autobuild/archive/refs/heads/gh-pages.zip
         unzip gh-pages.zip
         mkdir --parents data-mirror/autobuild
         cp --recursive autobuild-gh-pages/translation_build/ data-mirror/autobuild/translation_build
+
+    - name: Prepare data from update-data
+      run: |
+        mkdir --parents data-mirror/update-data
+        cp --recursive deploy/metadata/ data-mirror/update-data/metadata
+        cp --recursive deploy/store/ data-mirror/update-data/store
 
     - name: Commit
       run: |
@@ -96,6 +101,9 @@ jobs:
 
     - name: Push to gitverse
       run: |
+        git config user.name "update-bot"
+        git config user.email "update-bot"
+        git config user.password "test"
         git push
 
   # deploy_to_s3:
