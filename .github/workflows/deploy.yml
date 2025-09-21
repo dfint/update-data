@@ -93,17 +93,13 @@ jobs:
         cp --recursive deploy/metadata/ data-mirror/update-data/metadata
         cp --recursive deploy/store/ data-mirror/update-data/store
 
-    - name: Commit
+    - name: Commit and push
       run: |
         cd data-mirror
         git add .
-        git commit -m "Update data"
-
-    - name: Push to gitverse
-      run: |
-        cd data-mirror
         git config user.name "update-bot"
         git config user.email "update-bot"
+        git commit -m "Update data"
         git config user.password "test"
         git push
 
