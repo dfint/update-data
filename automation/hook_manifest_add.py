@@ -35,7 +35,7 @@ class ConfigItem(NamedTuple):
         return {
             "df": self.df_checksum,
             "checksum": self.payload_checksum,
-            "lib": self.hook_lib_url,
+            "lib": DEFAULT_MIRROR + self.hook_lib_url,
             "config": DEFAULT_MIRROR + self.config_url,
             "offsets": DEFAULT_MIRROR + self.offsets_url,
             "dfhooks": DEFAULT_MIRROR + self.dfhooks_url,
