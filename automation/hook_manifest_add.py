@@ -27,7 +27,6 @@ class ConfigItem(NamedTuple):
     df_checksum: str
     payload_checksum: int
     hook_lib_url: str
-    defatult_mirror: str
     config_url: str
     offsets_url: str
     dfhooks_url: str
