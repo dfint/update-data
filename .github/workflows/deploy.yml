@@ -101,6 +101,8 @@ jobs:
         commit_exit_code=$?
         if [ $commit_exit_code -eq 0 ]; then
           git push
+        else
+          true # Mark step as successful if there are no changes
         fi
 
   # deploy_to_s3:
