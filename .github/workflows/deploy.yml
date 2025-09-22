@@ -92,6 +92,7 @@ jobs:
         cp --recursive deploy/store/ data-mirror/update-data/store
 
     - name: Commit and push (if needed)
+      continue-on-error: true
       run: |
         cd data-mirror
         git add .
