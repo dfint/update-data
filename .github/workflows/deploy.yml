@@ -91,7 +91,7 @@ jobs:
         cp --recursive deploy/metadata/ data-mirror/update-data/metadata
         cp --recursive deploy/store/ data-mirror/update-data/store
 
-    - name: Commit and push (if needed)
+    - name: Commit
       continue-on-error: true
       run: |
         cd data-mirror
@@ -99,12 +99,12 @@ jobs:
         git config user.name "update-bot"
         git config user.email "update-bot"
         git commit -m "Update data"
-        commit_exit_code=$?
-        if [ $commit_exit_code -eq 0 ]; then
-          git push
-        else
-          echo "No changes to commit"
-        fi
+
+    - name: Push
+      if: success()
+      run: |
+        cd data-mirror
+        git push
 
   # deploy_to_s3:
   #   runs-on: ubuntu-latest
