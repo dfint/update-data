@@ -102,7 +102,7 @@ jobs:
         git commit -m "Update data"
 
     - name: Push
-      if: job.steps.commit.status == 'success'
+      if: job.steps.commit.outcome == 'success'
       run: |
         cd data-mirror
         git push
