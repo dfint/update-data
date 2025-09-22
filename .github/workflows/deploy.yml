@@ -93,19 +93,17 @@ jobs:
 
     - name: Commit
       id: commit
-      continue-on-error: true
       run: |
         cd data-mirror
         git add .
         git config user.name "update-bot"
         git config user.email "update-bot"
-        git commit -m "Update data"
 
-    - name: Push
-      if: job.steps.commit.outcome == 'success'
-      run: |
-        cd data-mirror
-        git push
+        if git commit -m "Update data"; then
+          git push
+        else
+          exit 0
+        fi
 
   # deploy_to_s3:
   #   runs-on: ubuntu-latest
