@@ -91,8 +91,7 @@ jobs:
         cp --recursive deploy/metadata/ data-mirror/update-data/metadata
         cp --recursive deploy/store/ data-mirror/update-data/store
 
-    - name: Commit
-      id: commit
+    - name: Commit and push
       continue-on-error: true
       run: |
         cd data-mirror
@@ -100,11 +99,6 @@ jobs:
         git config user.name "update-bot"
         git config user.email "update-bot"
         git commit -m "Update data"
-
-    - name: Push
-      if: job.steps.commit.status == 'success'
-      run: |
-        cd data-mirror
         git push
 
   # deploy_to_s3:
