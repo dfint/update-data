@@ -92,7 +92,6 @@ jobs:
         cp --recursive deploy/store/ data-mirror/update-data/store
 
     - name: Commit
-      id: commit
       continue-on-error: true
       run: |
         cd data-mirror
@@ -102,7 +101,7 @@ jobs:
         git commit -m "Update data"
 
     - name: Push
-      if: job.steps.commit.status == success()
+      if: success()
       run: |
         cd data-mirror
         git push
