@@ -63,7 +63,7 @@ jobs:
 
   deploy_to_gitverse:
     runs-on: ubuntu-latest
-    needs: deploy_to_gh_pages
+    needs: prepare
     steps:
     - name: Download artifact
       uses: actions/download-artifact@v5
