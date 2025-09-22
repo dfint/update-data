@@ -94,11 +94,12 @@ jobs:
     - name: Commit and push (if needed)
       run: |
         cd data-mirror
-        if ! git diff --exit-code; then
-          git add .
-          git config user.name "update-bot"
-          git config user.email "update-bot"
-          git commit -m "Update data"
+        git add .
+        git config user.name "update-bot"
+        git config user.email "update-bot"
+        git commit -m "Update data"
+        commit_exit_code=$?
+        if [ $commit_exit_code -eq 0 ]; then
           git push
         fi
 
