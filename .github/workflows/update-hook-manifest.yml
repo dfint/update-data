@@ -1,14 +1,15 @@
 name: Update hook manifest
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths:
       - 'automation/hook_manifest_update.py'
       - 'automation/hook_manifest_add.py'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'store/offsets/*'
-      - 'metadata/hook_v2.json'
+      - 'metadata/hook*.json'
       - '.github/workflows/update-hook-manifest.yml'
   pull_request:
     branches:
@@ -19,7 +20,7 @@ on:
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'store/offsets/*'
-      - 'metadata/hook_v2.json'
+      - 'metadata/hook*.json'
       - '.github/workflows/update-hook-manifest.yml'
 
 jobs:

@@ -8,7 +8,7 @@ on:
       - 'automation/dict_manifest_update.py'
       - 'store/encodings/*'
       - 'store/fonts/*'
-      - 'metadata/dict.json'
+      - 'metadata/dict*.json'
       - '.github/workflows/update-dict-manifest.yml'
   pull_request:
     branches:
@@ -17,7 +17,7 @@ on:
       - 'automation/dict_manifest_update.py'
       - 'store/encodings/*'
       - 'store/fonts/*'
-      - 'metadata/dict.json'
+      - 'metadata/dict*.json'
       - '.github/workflows/update-dict-manifest.yml'
 
 jobs:
