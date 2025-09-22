@@ -2,6 +2,7 @@
 # /// script
 # dependencies = [
 #     "httpx",
+#     "tqdm",
 # ]
 # ///
 
@@ -10,12 +11,12 @@ import sys
 from typing import Any, Awaitable, Callable, Coroutine
 
 import httpx
+from tqdm.asyncio import tqdm
 
 
 def get_semaphore_wrapper(
     semaphore: asyncio.Semaphore | None = None,
 ) -> Callable[[Awaitable], Coroutine]:
-
     async def wrapper(awaitable):
         if not semaphore:
             return await awaitable
@@ -45,7 +46,7 @@ async def get_dict_manifest(
 async def probe_url(client: httpx.AsyncClient, url: str) -> None:
     response = await client.get(url)
     response.raise_for_status()
-    print(".", end="", flush=True)
+    # print(".", end="", flush=True)
 
 
 async def main():
@@ -68,20 +69,45 @@ async def main():
     dict_data = dict_task.result()
 
     print("Checking URLs...")
-    semaphore = asyncio.Semaphore(10)
+    semaphore = asyncio.Semaphore(20)
     wrapper = get_semaphore_wrapper(semaphore)
     async with httpx.AsyncClient() as client:
-        async with asyncio.TaskGroup() as tg:
-            for item in hook_data:
-                tg.create_task(wrapper(probe_url(client, mirror + item["lib"])))
-                tg.create_task(wrapper(probe_url(client, mirror + item["config"])))
-                tg.create_task(wrapper(probe_url(client, mirror + item["offsets"])))
-                tg.create_task(wrapper(probe_url(client, mirror + item["dfhooks"])))
+        tasks = []
+        for item in hook_data:
+            tasks.extend(
+                [
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["lib"]))
+                    ),
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["config"]))
+                    ),
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["offsets"]))
+                    ),
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["dfhooks"]))
+                    ),
+                ]
+            )
 
-            for item in dict_data:
-                tg.create_task(wrapper(probe_url(client, mirror + item["csv"])))
-                tg.create_task(wrapper(probe_url(client, mirror + item["font"])))
-                tg.create_task(wrapper(probe_url(client, mirror + item["encoding"])))
+        for item in dict_data:
+            tasks.extend(
+                [
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["csv"]))
+                    ),
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["font"]))
+                    ),
+                    asyncio.create_task(
+                        wrapper(probe_url(client, mirror + item["encoding"]))
+                    ),
+                ]
+            )
+
+        for task in tqdm.as_completed(tasks):
+            await task
 
     print("Done.")
 
