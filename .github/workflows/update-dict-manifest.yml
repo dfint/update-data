@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'automation/dict_manifest_update.py'
+      - 'automation/dict_manifest_generate.py'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
@@ -14,7 +14,7 @@ on:
     branches:
       - main
     paths:
-      - 'automation/dict_manifest_update.py'
+      - 'automation/dict_manifest_generate.py'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
@@ -40,7 +40,7 @@ jobs:
       - name: Run update script
         run: |
           cd automation
-          uv run dict_manifest_update.py
+          uv run dict_manifest_generate.py
 
       - name: Commit changes
         if: ${{ !contains(fromJSON('["pull_request"]'), github.event_name) }}

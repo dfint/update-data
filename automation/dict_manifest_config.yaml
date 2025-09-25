@@ -1,0 +1,141 @@
+file_locations:
+  csv:
+    repo: autobuild
+    path: translation_build/csv_with_objects/
+  font:
+    repo: update-data
+    path: store/fonts/
+  encoding:
+    repo: update-data
+    path: store/encodings/
+
+languages:
+  - language: Беларуская
+    code: be
+    files:
+      - name: csv
+        path: Belarusian/dfint_dictionary.csv
+      - name: font
+        path: cp866.png
+      - name: encoding
+        path: cp866.toml
+
+  - language: Čeština
+    code: cs
+    files:
+      - name: csv
+        path: Czech/dfint_dictionary.csv
+      - name: font
+        path: cp852.png
+      - name: encoding
+        path: cp852.toml
+
+  - language: Deutsch
+    code: de
+    files:
+      - name: csv
+        path: German/dfint_dictionary.csv
+      - name: font
+        path: cp437.png
+      - name: encoding
+        path: cp437.toml
+
+  - language: Español
+    code: es
+    files:
+      - name: csv
+        path: Spanish/dfint_dictionary.csv
+      - name: font
+        path: cp850.png
+      - name: encoding
+        path: cp850.toml
+
+  - language: Français
+    code: fr
+    files:
+      - name: csv
+        path: French/dfint_dictionary.csv
+      - name: font
+        path: cp859.png
+      - name: encoding
+        path: cp859.toml
+
+  - language: Italiano
+    code: it
+    files:
+      - name: csv
+        path: Italian/dfint_dictionary.csv
+      - name: font
+        path: cp850.png
+      - name: encoding
+        path: cp850.toml
+
+  - language: Polski
+    code: pl
+    files:
+      - name: csv
+        path: Polish/dfint_dictionary.csv
+      - name: font
+        path: cp852.png
+      - name: encoding
+        path: cp852.toml
+
+  - language: Português (Brasil)
+    code: pt-BR
+    files:
+      - name: csv
+        path: Portuguese%20(Brazil)/dfint_dictionary.csv
+      - name: font
+        path: cp850.png
+      - name: encoding
+        path: cp850.toml
+
+  - language: Русский
+    code: ru
+    files:
+      - name: csv
+        path: Russian/dfint_dictionary.csv
+      - name: font
+        path: cp866.png
+      - name: encoding
+        path: cp866.toml
+
+  - language: Русский (cp1251)
+    files:
+      - name: csv
+        path: Russian%20(cp1251)/dfint_dictionary.csv
+      - name: font
+        path: cp1251.png
+      - name: encoding
+        path: cp1251.toml
+
+  - language: Українська
+    code: uk
+    files:
+      - name: csv
+        path: Ukrainian/dfint_dictionary.csv
+      - name: font
+        path: cp866u.png
+      - name: encoding
+        path: cp866u.toml
+
+  - language: Japanese (Romaji)
+    code: ja
+    files:
+      - name: csv
+        path: Japanese%20(Romaji)/dfint_dictionary.csv
+      - name: font
+        path: cp437.png
+      - name: encoding
+        path: cp437.toml
+
+  - language: English
+    code: en
+    files:
+      - name: csv
+        repo: update-data
+        full_path: store/csv/en.csv
+      - name: font
+        path: cp437.png
+      - name: encoding
+        path: cp437.toml
