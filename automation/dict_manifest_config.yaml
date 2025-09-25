@@ -1,0 +1,168 @@
+- language: Беларуская
+  code: be
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Belarusian/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp866.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp866.toml
+
+- language: Čeština
+  code: cs
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Czech/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp852.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp852.toml
+
+- language: Deutsch
+  code: de
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/German/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp437.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp437.toml
+
+- language: Español
+  code: es
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Spanish/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp850.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp850.toml
+
+- language: Français
+  code: fr
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/French/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp859.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp859.toml
+
+- language: Italiano
+  code: it
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Italian/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp850.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp850.toml
+
+- language: Polski
+  code: pl
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Polish/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp852.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp852.toml
+
+- language: Português (Brasil)
+  code: pt-BR
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Portuguese%20(Brazil)/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp850.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp850.toml
+
+- language: Русский
+  code: ru
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Russian/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp866.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp866.toml
+
+- language: Русский (cp1251)
+  code: ru
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Russian%20(cp1251)/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp1251.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp1251.toml
+
+- language: Українська
+  code: uk
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Ukrainian/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp866u.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp866u.toml
+
+- language: Japanese (Romaji)
+  code: ja
+  files:
+    - name: csv
+      repo: autobuild
+      path: translation_build/csv_with_objects/Japanese%20(Romaji)/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp437.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp437.toml
+
+- language: English
+  code: en
+  files:
+    - name: csv
+      repo: update-data
+      path: store/dfint_dictionary.csv
+    - name: font
+      repo: update-data
+      path: store/fonts/cp437.png
+    - name: encoding
+      repo: update-data
+      path: store/encodings/cp437.toml

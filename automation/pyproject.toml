@@ -7,7 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "alternative-encodings>=0.3.1",
     "natsort>=8.4.0",
+    "pydantic>=2.11.9",
     "requests>=2.32.3",
+    "strictyaml>=1.7.3",
     "toml>=0.10.2",
 ]
 
