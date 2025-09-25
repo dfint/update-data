@@ -1,4 +1,5 @@
 import binascii
+import json
 from pathlib import Path
 from pydantic import BaseModel, RootModel
 import strictyaml
@@ -10,6 +11,7 @@ config_path = current_directory / "dict_manifest_config.yaml"
 repo_root = current_directory.parent
 org = "dfint"
 current_repo = "update-data"
+DEFAULT_MIRROR = "https://dfint.github.io"
 
 
 class FileInfo(BaseModel):
@@ -21,7 +23,7 @@ class FileInfo(BaseModel):
 
 class DictManifestConfigEntry(BaseModel):
     language: str
-    code: str
+    code: str | None = None
     files: list[FileInfo]
     checksum: int | None = None
 
@@ -45,7 +47,7 @@ def get_file_data(file: FileInfo) -> bytes:
 
 def calculate_checksums(config: Config) -> None:
     for entry in config.root:
-        data = b''
+        data = b""
         for file in entry.files:
             file_data = get_file_data(file)
             data += file_data
@@ -53,11 +55,60 @@ def calculate_checksums(config: Config) -> None:
         entry.checksum = binascii.crc32(data)
 
 
+def write_dict_manifest_v1(config: Config) -> None:
+    manifest_data = []
+    for entry in config.root:
+        language_info = {
+            "language": entry.language,
+        }
+
+        if entry.code:
+            language_info["code"] = entry.code
+
+        for file in entry.files:
+            language_info[file.name] = f"{DEFAULT_MIRROR}/{file.repo}/{file.path}"
+
+        language_info["checksum"] = entry.checksum
+        manifest_data.append(language_info)
+
+    dict_json_path = repo_root / "metadata/dict.json"
+    dict_json_path.write_text(
+        json.dumps(manifest_data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
+def write_dict_manifest_v3(config: Config) -> None:
+    manifest_data = []
+    for entry in config.root:
+        language_info = {
+            "language": entry.language,
+        }
+
+        if entry.code:
+            language_info["code"] = entry.code
+
+        for file in entry.files:
+            language_info[file.name] = f"/{file.repo}/{file.path}"
+
+        language_info["checksum"] = entry.checksum
+        manifest_data.append(language_info)
+
+    dict_json_path = repo_root / "metadata/dict_v3.json"
+    dict_json_path.write_text(
+        json.dumps(manifest_data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
 def main() -> None:
+    print("Loading config...")
     config = load_config()
+    print("Calculating checksums...")
     calculate_checksums(config)
-    for row in config.root:
-        print(row.language, row.code, row.checksum)
+    print("Writing dict manifest v1...")
+    write_dict_manifest_v1(config)
+    print("Writing dict manifest v3...")
+    write_dict_manifest_v3(config)
+    print("Done.")
 
 
 if __name__ == "__main__":

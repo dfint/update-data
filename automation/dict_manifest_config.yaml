@@ -116,7 +116,6 @@
       path: store/encodings/cp866.toml
 
 - language: Русский (cp1251)
-  code: ru
   files:
     - name: csv
       repo: autobuild
