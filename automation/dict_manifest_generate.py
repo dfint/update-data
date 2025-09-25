@@ -1,7 +1,7 @@
 import binascii
 import json
 from pathlib import Path
-from pydantic import BaseModel, RootModel
+from pydantic import BaseModel
 import strictyaml
 
 from utils import get_from_url
@@ -14,11 +14,18 @@ current_repo = "update-data"
 DEFAULT_MIRROR = "https://dfint.github.io"
 
 
-class FileInfo(BaseModel):
-    name: str
+class FileLocationInfo(BaseModel):
     repo: str
     branch: str = "main"
     path: str
+
+
+class FileInfo(BaseModel):
+    name: str
+    repo: str | None = None
+    branch: str = "main"
+    path: str | None = None
+    full_path: str | None = None
 
 
 class DictManifestConfigEntry(BaseModel):
@@ -28,8 +35,9 @@ class DictManifestConfigEntry(BaseModel):
     checksum: int | None = None
 
 
-class Config(RootModel):
-    root: list[DictManifestConfigEntry]
+class Config(BaseModel):
+    file_locations: dict[str, FileLocationInfo]
+    languages: list[DictManifestConfigEntry]
 
 
 def load_config() -> Config:
@@ -39,14 +47,26 @@ def load_config() -> Config:
 
 def get_file_data(file: FileInfo) -> bytes:
     if file.repo == current_repo:
-        return (repo_root / file.path).read_bytes()
+        return (repo_root / file.full_path).read_bytes()
     else:
-        url = f"https://raw.githubusercontent.com/{org}/{file.repo}/refs/heads/{file.branch}/{file.path}"
+        url = f"https://raw.githubusercontent.com/{org}/{file.repo}/refs/heads/{file.branch}/{file.full_path}"
         return get_from_url(url)
 
 
+def fill_file_locations(config: Config) -> None:
+    for entry in config.languages:
+        for file in entry.files:
+            if file.full_path:
+                continue
+
+            default_location = config.file_locations.get(file.name)
+            file.repo = default_location.repo
+            file.branch = default_location.branch
+            file.full_path = default_location.path + file.path
+
+
 def calculate_checksums(config: Config) -> None:
-    for entry in config.root:
+    for entry in config.languages:
         data = b""
         for file in entry.files:
             file_data = get_file_data(file)
@@ -57,7 +77,7 @@ def calculate_checksums(config: Config) -> None:
 
 def write_dict_manifest_v1(config: Config) -> None:
     manifest_data = []
-    for entry in config.root:
+    for entry in config.languages:
         language_info = {
             "language": entry.language,
         }
@@ -66,7 +86,7 @@ def write_dict_manifest_v1(config: Config) -> None:
             language_info["code"] = entry.code
 
         for file in entry.files:
-            language_info[file.name] = f"{DEFAULT_MIRROR}/{file.repo}/{file.path}"
+            language_info[file.name] = f"{DEFAULT_MIRROR}/{file.repo}/{file.full_path}"
 
         language_info["checksum"] = entry.checksum
         manifest_data.append(language_info)
@@ -79,7 +99,7 @@ def write_dict_manifest_v1(config: Config) -> None:
 
 def write_dict_manifest_v3(config: Config) -> None:
     manifest_data = []
-    for entry in config.root:
+    for entry in config.languages:
         language_info = {
             "language": entry.language,
         }
@@ -88,7 +108,7 @@ def write_dict_manifest_v3(config: Config) -> None:
             language_info["code"] = entry.code
 
         for file in entry.files:
-            language_info[file.name] = f"/{file.repo}/{file.path}"
+            language_info[file.name] = f"/{file.repo}/{file.full_path}"
 
         language_info["checksum"] = entry.checksum
         manifest_data.append(language_info)
@@ -102,6 +122,7 @@ def write_dict_manifest_v3(config: Config) -> None:
 def main() -> None:
     print("Loading config...")
     config = load_config()
+    fill_file_locations(config)
     print("Calculating checksums...")
     calculate_checksums(config)
     print("Writing dict manifest v1...")

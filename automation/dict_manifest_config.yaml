@@ -1,4 +1,4 @@
-file_positions:
+file_locations:
   csv:
     repo: autobuild
     path: translation_build/csv_with_objects/
