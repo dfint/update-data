@@ -6,11 +6,11 @@ import strictyaml
 
 from utils import get_from_url
 
-current_directory = Path(__file__).parent
-config_path = current_directory / "dict_manifest_config.yaml"
-repo_root = current_directory.parent
-org = "dfint"
-current_repo = "update-data"
+CURRENT_DIRECTORY = Path(__file__).parent
+CONFIG_PATH = CURRENT_DIRECTORY / "dict_manifest_config.yaml"
+REPO_ROOT = CURRENT_DIRECTORY.parent
+ORG = "dfint"
+CURRENT_REPO = "update-data"
 DEFAULT_MIRROR = "https://dfint.github.io"
 
 
@@ -41,15 +41,15 @@ class Config(BaseModel):
 
 
 def load_config() -> Config:
-    yaml = strictyaml.load(config_path.read_text())
+    yaml = strictyaml.load(CONFIG_PATH.read_text())
     return Config.model_validate(yaml.data)
 
 
 def get_file_data(file: FileInfo) -> bytes:
-    if file.repo == current_repo:
-        return (repo_root / file.full_path).read_bytes()
+    if file.repo == CURRENT_REPO:
+        return (REPO_ROOT / file.full_path).read_bytes()
     else:
-        url = f"https://raw.githubusercontent.com/{org}/{file.repo}/refs/heads/{file.branch}/{file.full_path}"
+        url = f"https://raw.githubusercontent.com/{ORG}/{file.repo}/refs/heads/{file.branch}/{file.full_path}"
         return get_from_url(url)
 
 
@@ -91,7 +91,7 @@ def write_dict_manifest_v1(config: Config) -> None:
         language_info["checksum"] = entry.checksum
         manifest_data.append(language_info)
 
-    dict_json_path = repo_root / "metadata/dict.json"
+    dict_json_path = REPO_ROOT / "metadata/dict.json"
     dict_json_path.write_text(
         json.dumps(manifest_data, indent=2, ensure_ascii=False), encoding="utf-8"
     )
@@ -113,7 +113,7 @@ def write_dict_manifest_v3(config: Config) -> None:
         language_info["checksum"] = entry.checksum
         manifest_data.append(language_info)
 
-    dict_json_path = repo_root / "metadata/dict_v3.json"
+    dict_json_path = REPO_ROOT / "metadata/dict_v3.json"
     dict_json_path.write_text(
         json.dumps(manifest_data, indent=2, ensure_ascii=False), encoding="utf-8"
     )
