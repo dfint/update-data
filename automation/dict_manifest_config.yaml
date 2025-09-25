@@ -134,7 +134,7 @@ languages:
     files:
       - name: csv
         repo: update-data
-        path: store/csv/en.csv
+        full_path: store/csv/en.csv
       - name: font
         path: cp437.png
       - name: encoding
