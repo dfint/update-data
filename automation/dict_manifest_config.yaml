@@ -159,7 +159,7 @@
   files:
     - name: csv
       repo: update-data
-      path: store/dfint_dictionary.csv
+      path: store/csv/en.csv
     - name: font
       repo: update-data
       path: store/fonts/cp437.png
