@@ -56,7 +56,8 @@ def get_file_data(file: FileInfo) -> bytes:
 def fill_file_locations(config: Config) -> None:
     for entry in config.languages:
         for file in entry.files:
-            if file.full_path:
+            if file.repo:
+                file.full_path = file.full_path or file.path
                 continue
 
             default_location = config.file_locations.get(file.name)
