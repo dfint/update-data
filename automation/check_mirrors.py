@@ -14,6 +14,12 @@ import httpx
 from tqdm.asyncio import tqdm
 
 
+mirrors = [
+    "https://dfint.github.io",
+    "https://gitverse.ru/api/repos/dfint/data-mirror/raw/branch/master",
+]
+
+
 def get_semaphore_wrapper(
     semaphore: asyncio.Semaphore | None = None,
 ) -> Callable[[Awaitable], Coroutine]:
@@ -49,12 +55,7 @@ async def probe_url(client: httpx.AsyncClient, url: str) -> None:
     # print(".", end="", flush=True)
 
 
-async def main():
-    if len(sys.argv) < 2:
-        mirror = "https://dfint.github.io"
-    else:
-        mirror = "https://" + sys.argv[1]
-
+async def check_mirror(mirror: str) -> None:
     print("Checking mirror", mirror)
     print("Loading manifests...")
 
@@ -110,6 +111,12 @@ async def main():
             await task
 
     print("Done.")
+    print("=" * 120)
+
+
+async def main() -> None:
+    for mirror in mirrors:
+        await check_mirror(mirror)
 
 
 if __name__ == "__main__":
