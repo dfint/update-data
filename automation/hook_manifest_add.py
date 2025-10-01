@@ -6,19 +6,20 @@ from typing import Any, Iterator, NamedTuple
 import toml
 from natsort import natsorted
 
-from utils import get_from_url
-
 base_dir = Path(__file__).parent.parent  # base directory of the repository
 
 hook_v2_json_path = base_dir / "metadata/hook_v2.json"
 hook_v3_json_path = base_dir / "metadata/hook_v3.json"
 offsets_toml_path = base_dir / "store/offsets"
-config_path = base_dir / "store"
+store_path = base_dir / "store"
+libs_path = store_path / "libs"
+hook_base_path = libs_path / "hook"
+dfhooks_base_path = libs_path / "dfhooks"
 
 DEFAULT_MIRROR = "https://dfint.github.io"
 
 offsets_base_url = "/update-data/store/offsets/"
-lib_download_base_url = "/update-data/store/libs/hook/"
+hook_download_base_url = "/update-data/store/libs/hook/"
 dfhooks_download_base_url = "/update-data/store/libs/dfhooks/"
 config_base_url = "/update-data/store/"
 
@@ -58,11 +59,11 @@ def add_info_to_manifest(manifest_path: str, config_item: dict[str, Any]) -> Non
     manifest_path.write_text(json.dumps(hook_manifest, indent=2))
 
 
-def add_maifest_entry(hook_lib_url: str, config_file_name: str, offsets_file_name: str, dfhooks_url: str) -> None:
-    res_hook = get_from_url(hook_lib_url)
-    res_config = (config_path / config_file_name).read_bytes()
+def add_maifest_entry(hook_path: str, config_file_name: str, offsets_file_name: str, dfhooks_path: str) -> None:
+    res_hook = (hook_base_path / hook_path).read_bytes()
+    res_config = (store_path / config_file_name).read_bytes()
     res_offsets = (offsets_toml_path / offsets_file_name).read_bytes()
-    res_dfhooks = get_from_url(dfhooks_url)
+    res_dfhooks = (dfhooks_base_path / dfhooks_path).read_bytes()
 
     offsets_data = toml.loads(res_offsets.decode(encoding="utf-8"))
     df_checksum = offsets_data["metadata"]["checksum"]
@@ -71,10 +72,10 @@ def add_maifest_entry(hook_lib_url: str, config_file_name: str, offsets_file_nam
     config_item = ConfigItem(
         df_checksum,
         payload_checksum,
-        hook_lib_url,
+        hook_download_base_url + hook_path,
         config_base_url + config_file_name,
         offsets_base_url + offsets_file_name,
-        dfhooks_url,
+        dfhooks_download_base_url + dfhooks_path,
     )
 
     add_info_to_manifest(
@@ -116,10 +117,10 @@ def main() -> None:
         operating_system = Path(file_name).stem.rpartition("_")[2]
         lib_variant = config[operating_system]
         add_maifest_entry(
-            lib_download_base_url + lib_variant["lib"],
+            lib_variant["lib"],
             "config.toml",
             file_name,
-            dfhooks_download_base_url + lib_variant["dfhooks"]
+            lib_variant["dfhooks"]
         )
 
 
