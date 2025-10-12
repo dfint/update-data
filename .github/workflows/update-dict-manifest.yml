@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'automation/dict_manifest_generate.py'
+      - 'automation/dict_manifest_config.yaml'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
@@ -15,6 +16,7 @@ on:
       - main
     paths:
       - 'automation/dict_manifest_generate.py'
+      - 'automation/dict_manifest_config.yaml'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
