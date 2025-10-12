@@ -48,13 +48,6 @@
     "checksum": 2093226016
   },
   {
-    "language": "Magyar",
-    "code": "hu",
-    "csv": "/autobuild/translation_build/csv_with_objects/Hungarian/dfint_dictionary.csv",
-    "font": "/update-data/store/fonts/cp852.png",
-    "encoding": "/update-data/store/encodings/cp852.toml"
-  },
-  {
     "language": "Polski",
     "code": "pl",
     "csv": "/autobuild/translation_build/csv_with_objects/Polish/dfint_dictionary.csv",
