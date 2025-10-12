@@ -70,6 +70,16 @@ languages:
       - name: encoding
         path: cp850.toml
 
+  - language: Magyar
+    code: hu
+    files:
+      - name: csv
+        path: Hungarian/dfint_dictionary.csv
+      - name: font
+        path: cp852.png
+      - name: encoding
+        path: cp852.toml
+
   - language: Polski
     code: pl
     files:
