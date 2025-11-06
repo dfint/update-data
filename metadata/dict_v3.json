@@ -77,14 +77,14 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Russian/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp866.png",
     "encoding": "/update-data/store/encodings/cp866.toml",
-    "checksum": 2056429077
+    "checksum": 693260763
   },
   {
     "language": "Русский (cp1251)",
     "csv": "/autobuild/translation_build/csv_with_objects/Russian%20(cp1251)/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp1251.png",
     "encoding": "/update-data/store/encodings/cp1251.toml",
-    "checksum": 3008520655
+    "checksum": 2028929801
   },
   {
     "language": "Українська",
