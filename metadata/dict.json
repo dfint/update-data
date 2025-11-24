@@ -32,6 +32,14 @@
     "checksum": 3096887840
   },
   {
+    "language": "Esperanto",
+    "code": "eo",
+    "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Esperanto/dfint_dictionary.csv",
+    "font": "https://dfint.github.io/update-data/store/fonts/latin3.png",
+    "encoding": "https://dfint.github.io/update-data/store/encodings/cp437.toml",
+    "checksum": 1747241532
+  },
+  {
     "language": "Français",
     "code": "fr",
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/French/dfint_dictionary.csv",
