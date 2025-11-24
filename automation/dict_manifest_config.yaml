@@ -50,6 +50,16 @@ languages:
       - name: encoding
         path: cp850.toml
 
+  - language: Esperanto
+    code: eo
+    files:
+      - name: csv
+        path: Esperanto/dfint_dictionary.csv
+      - name: font
+        path: latin3.png
+      - name: encoding
+        path: cp437.toml
+
   - language: Français
     code: fr
     files:
