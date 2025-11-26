@@ -62,6 +62,8 @@ encoding = "cp857"
 
 [maps.lowercase]
 
+[maps.simplify]
+
 [maps.utf]
 34755 = 128 # Ç
 48323 = 129 # ü

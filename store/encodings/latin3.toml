@@ -28,6 +28,8 @@ encoding = "latin3"
 
 [maps.lowercase]
 
+[maps.simplify]
+
 [maps.utf]
 42692 = 161 # Ħ
 42180 = 166 # Ĥ
