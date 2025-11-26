@@ -1,11 +1,11 @@
-from typing import Iterable, Iterator, NamedTuple, Optional
+from typing import Iterable, Iterator, NamedTuple
 
 import alternative_encodings
 
 alternative_encodings.register_all()
 
 
-def get_letters(encoding: str, min_code: int=0) -> Iterator[str]:
+def get_letters(encoding: str, min_code: int = 0) -> Iterator[str]:
     for i in range(min_code, 256):
         try:
             char = bytes([i]).decode(encoding)
@@ -34,13 +34,16 @@ class State(NamedTuple):
     to_code: int
     from_letter: str
     to_letter: str
-    
+
     @property
     def diff(self):
         return self.to_code - self.from_code
-    
+
     def is_plus_one(self, other):
-        return abs(other.from_code - self.from_code) <= 1 and abs(other.to_code - self.to_code) <= 1
+        return (
+            abs(other.from_code - self.from_code) <= 1
+            and abs(other.to_code - self.to_code) <= 1
+        )
 
 
 def format_result(state_start: State, state_end: State) -> str:
@@ -48,15 +51,15 @@ def format_result(state_start: State, state_end: State) -> str:
         return f"{state_end.from_code} = {state_start.diff} # {state_end.from_letter} -> {state_end.to_letter}"
     else:
         return (
-            f"\"{state_start.from_code}:{state_end.from_code}\" = {state_start.diff} "
+            f'"{state_start.from_code}:{state_end.from_code}" = {state_start.diff} '
             f"# {state_start.from_letter}-{state_end.from_letter} -> {state_start.to_letter}-{state_end.to_letter}"
         )
 
 
 def group_mapping(mapping: Iterable[tuple[str, str]], encoding: str) -> Iterator[str]:
-    state_start: Optional[State] = None
-    prev_state: Optional[State] = None
-    
+    state_start: State | None = None
+    prev_state: State | None = None
+
     for from_letter, to_letter in mapping:
         current_state = State(
             from_code=from_letter.encode(encoding)[0],
@@ -64,42 +67,44 @@ def group_mapping(mapping: Iterable[tuple[str, str]], encoding: str) -> Iterator
             from_letter=from_letter,
             to_letter=to_letter,
         )
-        
+
         if state_start is None:
             state_start = current_state
             prev_state = current_state
 
         if not current_state.is_plus_one(prev_state):
+            assert prev_state is not None
             yield format_result(state_start, prev_state)
             state_start = current_state
-        
+
         prev_state = current_state
-    
+
     if prev_state:
+        assert state_start is not None
         yield format_result(state_start, prev_state)
 
 
 def main(encoding: str):
     print("[metadata]")
-    print(f"encoding = \"{encoding}\"")
+    print(f'encoding = "{encoding}"')
     print()
-    
+
     letters = list(get_letters(encoding))
-    
+
     print("[maps.capitalize]")
     capitalize_map = list(get_capitalize_map(letters))
     for line in group_mapping(capitalize_map, encoding):
         print(line)
-    
+
     print()
-    
+
     print("[maps.lowercast]")
     lower_map = list(get_lower_map(letters))
     for line in group_mapping(lower_map, encoding):
         print(line)
 
     print()
-    
+
     print("[maps.utf]")
     letters = get_letters(encoding, 128)
     for letter in letters:
@@ -121,4 +126,5 @@ def main(encoding: str):
 
 if __name__ == "__main__":
     import sys
+
     main(sys.argv[1])
