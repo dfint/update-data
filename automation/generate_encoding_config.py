@@ -107,6 +107,16 @@ def main(encoding: str):
         utf8_code = int.from_bytes(letter.encode("utf-8"), byteorder="little")
         print(f"{utf8_code} = {code} # {letter}")
 
+    print()
+
+    print("[maps.uppercase]")
+    print()
+
+    print("[maps.lowercase]")
+    print()
+
+    print("[maps.simplify]")
+    print()
 
 if __name__ == "__main__":
     import sys
