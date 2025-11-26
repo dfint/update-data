@@ -129,15 +129,15 @@ languages:
       - name: encoding
         path: cp1251.toml
 
-  # - language: Türkçe
-  #   code: tr
-  #   files:
-  #     - name: csv
-  #       path: Turkish/dfint_dictionary.csv
-  #     - name: font
-  #       path: cp857.png
-  #     - name: encoding
-  #       path: cp857.toml
+  - language: Türkçe
+    code: tr
+    files:
+      - name: csv
+        path: Turkish/dfint_dictionary.csv
+      - name: font
+        path: cp857.png
+      - name: encoding
+        path: cp857.toml
 
   - language: Українська
     code: uk
