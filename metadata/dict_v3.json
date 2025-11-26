@@ -95,14 +95,6 @@
     "checksum": 2862136317
   },
   {
-    "language": "Türkçe",
-    "code": "tr",
-    "csv": "/autobuild/translation_build/csv_with_objects/Turkish/dfint_dictionary.csv",
-    "font": "/update-data/store/fonts/cp857.png",
-    "encoding": "/update-data/store/encodings/cp857.toml",
-    "checksum": 2901605939
-  },
-  {
     "language": "Українська",
     "code": "uk",
     "csv": "/autobuild/translation_build/csv_with_objects/Ukrainian/dfint_dictionary.csv",
