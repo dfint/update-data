@@ -1110,5 +1110,37 @@
     "config": "/update-data/store/config.toml",
     "offsets": "/update-data/store/offsets/53.07_steam_win64.toml",
     "dfhooks": "/update-data/store/libs/dfhooks/v1/dfhooks.dll"
+  },
+  {
+    "df": 2587072869,
+    "checksum": 2426460974,
+    "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.so",
+    "config": "/update-data/store/config.toml",
+    "offsets": "/update-data/store/offsets/53.08_other_linux64.toml",
+    "dfhooks": "/update-data/store/libs/dfhooks/v1/libdfhooks.so"
+  },
+  {
+    "df": 1766152826,
+    "checksum": 2987324622,
+    "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
+    "config": "/update-data/store/config.toml",
+    "offsets": "/update-data/store/offsets/53.08_other_win64.toml",
+    "dfhooks": "/update-data/store/libs/dfhooks/v1/dfhooks.dll"
+  },
+  {
+    "df": 1567370128,
+    "checksum": 2391786120,
+    "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.so",
+    "config": "/update-data/store/config.toml",
+    "offsets": "/update-data/store/offsets/53.08_steam_linux64.toml",
+    "dfhooks": "/update-data/store/libs/dfhooks/v1/libdfhooks.so"
+  },
+  {
+    "df": 1766149976,
+    "checksum": 3863003007,
+    "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
+    "config": "/update-data/store/config.toml",
+    "offsets": "/update-data/store/offsets/53.08_steam_win64.toml",
+    "dfhooks": "/update-data/store/libs/dfhooks/v1/dfhooks.dll"
   }
 ]
