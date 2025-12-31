@@ -149,7 +149,7 @@ languages:
       - name: encoding
         path: cp866u.toml
 
-  - language: Việt
+  - language: Vietnamese
     code: vi
     files:
       - name: csv
