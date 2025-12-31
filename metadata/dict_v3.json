@@ -111,7 +111,7 @@
     "checksum": 3203001135
   },
   {
-    "language": "Việt",
+    "language": "Vietnamese",
     "code": "vi",
     "csv": "/autobuild/translation_build/csv_with_objects/Vietnamese/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/viscii.png",
