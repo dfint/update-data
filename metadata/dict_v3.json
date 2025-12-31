@@ -111,6 +111,14 @@
     "checksum": 3203001135
   },
   {
+    "language": "Việt",
+    "code": "vi",
+    "csv": "/autobuild/translation_build/csv_with_objects/Vietnamese/dfint_dictionary.csv",
+    "font": "/update-data/store/fonts/viscii.png",
+    "encoding": "/update-data/store/encodings/viscii.toml",
+    "checksum": 4047225110
+  },
+  {
     "language": "Japanese (Romaji)",
     "code": "ja",
     "csv": "/autobuild/translation_build/csv_with_objects/Japanese%20(Romaji)/dfint_dictionary.csv",
