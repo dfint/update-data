@@ -149,15 +149,15 @@ languages:
       - name: encoding
         path: cp866u.toml
 
-  # - language: Vietnamese
-  #   code: vi
-  #   files:
-  #     - name: csv
-  #       path: Vietnamese/dfint_dictionary.csv
-  #     - name: font
-  #       path: viscii.png
-  #     - name: encoding
-  #       path: viscii.toml
+  - language: Vietnamese
+    code: vi
+    files:
+      - name: csv
+        path: Vietnamese/dfint_dictionary.csv
+      - name: font
+        path: viscii.png
+      - name: encoding
+        path: viscii.toml
 
   - language: Japanese (Romaji)
     code: ja
