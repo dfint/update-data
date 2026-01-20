@@ -21,7 +21,7 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/German/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/cp437.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp437.toml",
-    "checksum": 2101329168
+    "checksum": 3038728589
   },
   {
     "language": "Español",
@@ -100,7 +100,7 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Turkish/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/cp857.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp857.toml",
-    "checksum": 343109463
+    "checksum": 4211257646
   },
   {
     "language": "Українська",
