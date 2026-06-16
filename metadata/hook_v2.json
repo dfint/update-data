@@ -1305,34 +1305,34 @@
   },
   {
     "df": 2851049841,
-    "checksum": 198970704,
+    "checksum": 1114504184,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.so",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.14_other_linux64.toml",
-    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/v1/libdfhooks.so"
+    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/2026-05-22/libdfhooks.so"
   },
   {
     "df": 1779107282,
-    "checksum": 816247471,
+    "checksum": 1914809445,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.14_other_win64.toml",
-    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/v1/dfhooks.dll"
+    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/2026-05-22/dfhooks.dll"
   },
   {
     "df": 3824495851,
-    "checksum": 2460661652,
+    "checksum": 2762475613,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.so",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.14_steam_linux64.toml",
-    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/v1/libdfhooks.so"
+    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/2026-05-22/libdfhooks.so"
   },
   {
     "df": 1779101691,
-    "checksum": 976807478,
+    "checksum": 2388459289,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.14_steam_win64.toml",
-    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/v1/dfhooks.dll"
+    "dfhooks": "https://dfint.github.io/update-data/store/libs/dfhooks/2026-05-22/dfhooks.dll"
   }
 ]
