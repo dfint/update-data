@@ -29,7 +29,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Spanish/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp850.png",
     "encoding": "/update-data/store/encodings/cp850.toml",
-    "checksum": 3446574695
+    "checksum": 1230920552
   },
   {
     "language": "Esperanto",
@@ -85,14 +85,14 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Russian/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp866.png",
     "encoding": "/update-data/store/encodings/cp866.toml",
-    "checksum": 608188767
+    "checksum": 3556372429
   },
   {
     "language": "Русский (cp1251)",
     "csv": "/autobuild/translation_build/csv_with_objects/Russian%20(cp1251)/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp1251.png",
     "encoding": "/update-data/store/encodings/cp1251.toml",
-    "checksum": 3543244627
+    "checksum": 1987227664
   },
   {
     "language": "Türkçe",
@@ -100,7 +100,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Turkish/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp857.png",
     "encoding": "/update-data/store/encodings/cp857.toml",
-    "checksum": 4250558981
+    "checksum": 922286089
   },
   {
     "language": "Українська",
