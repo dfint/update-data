@@ -83,7 +83,7 @@
     "language": "Русский",
     "code": "ru",
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Russian/dfint_dictionary.csv",
-    "font": "https://dfint.github.io/update-data/store/fonts/cp866.png",
+    "font": "https://dfint.github.io/update-data/store/fonts/cp866r.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp866.toml",
     "checksum": 3717102508
   },

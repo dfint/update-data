@@ -116,7 +116,7 @@ languages:
       - name: csv
         path: Russian/dfint_dictionary.csv
       - name: font
-        path: cp866.png
+        path: cp866r.png
       - name: encoding
         path: cp866.toml
 
