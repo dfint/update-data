@@ -1,0 +1,18 @@
+[metadata]
+name = "dfint localization hook offsets"
+version = "53.14 steam win64"
+checksum = 0x6A0AEFFB
+
+[offsets]
+string_copy_n = 0x6F8D0
+string_append_n = 0x6FA10
+std_string_ctor = 0x681F0
+addst = 0xAD4850
+addst_top = 0xAD4930
+addst_flag = 0xAD4760
+standardstringentry = 0xC345E0
+simplify_string = 0x52B430
+upper_case_string = 0x52B770
+lower_case_string = 0x52B5D0
+capitalize_string_words = 0x52B910
+capitalize_string_first_word = 0x52BBA0
