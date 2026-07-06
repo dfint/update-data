@@ -1,5 +1,6 @@
 name: Update dictionary manifest
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [dict]
   push:
