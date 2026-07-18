@@ -37,7 +37,7 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Esperanto/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/latin3.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp437.toml",
-    "checksum": 634257282
+    "checksum": 2098459261
   },
   {
     "language": "Français",
