@@ -45,7 +45,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/French/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp859.png",
     "encoding": "/update-data/store/encodings/cp859.toml",
-    "checksum": 848253707
+    "checksum": 2523281070
   },
   {
     "language": "Italiano",
@@ -53,7 +53,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Italian/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp850.png",
     "encoding": "/update-data/store/encodings/cp850.toml",
-    "checksum": 3272327888
+    "checksum": 2169043968
   },
   {
     "language": "Magyar",
