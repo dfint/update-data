@@ -13,7 +13,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Czech/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp852.png",
     "encoding": "/update-data/store/encodings/cp852.toml",
-    "checksum": 2078179782
+    "checksum": 4008952592
   },
   {
     "language": "Deutsch",
@@ -116,7 +116,7 @@
     "csv": "/autobuild/translation_build/csv_with_objects/Ukrainian/dfint_dictionary.csv",
     "font": "/update-data/store/fonts/cp866u.png",
     "encoding": "/update-data/store/encodings/cp866u.toml",
-    "checksum": 2036213446
+    "checksum": 3842608286
   },
   {
     "language": "Vietnamese",
