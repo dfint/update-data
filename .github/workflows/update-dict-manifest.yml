@@ -8,6 +8,8 @@ on:
     paths:
       - 'automation/dict_manifest_generate.py'
       - 'automation/dict_manifest_config.yaml'
+      - 'automation/pyproject.toml'
+      - 'automation/uv.lock'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
@@ -18,6 +20,8 @@ on:
     paths:
       - 'automation/dict_manifest_generate.py'
       - 'automation/dict_manifest_config.yaml'
+      - 'automation/pyproject.toml'
+      - 'automation/uv.lock'
       - 'store/encodings/*'
       - 'store/fonts/*'
       - 'metadata/dict*.json'
@@ -46,7 +50,7 @@ jobs:
           uv run dict_manifest_generate.py
 
       - name: Commit changes
-        if: ${{ !contains(fromJSON('["pull_request"]'), github.event_name) }}
+        if: ${{ !contains(fromJSON('["push", "pull_request"]'), github.event_name) }}
         uses: EndBug/add-and-commit@v11.1.1
         with:
           author_name: github-actions[bot]
