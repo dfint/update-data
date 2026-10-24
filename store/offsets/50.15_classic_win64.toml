@@ -1,0 +1,18 @@
+[metadata]
+name = "dfint localization hook offsets"
+version = "51.15 classic win64"
+checksum = 0x6759F0A8
+
+[offsets]
+string_copy_n = 0xD4D0
+string_append_n = 0xD610
+std_string_ctor = 0x1A8F0
+addst = 0x8498F0
+addst_top = 0x8499D0
+addst_flag = 0x849800
+standardstringentry = 0x954290
+simplify_string = 0x3F8820
+upper_case_string = 0x3F8B60
+lower_case_string = 0x3F89C0
+capitalize_string_words = 0x3F8D00
+capitalize_string_first_word = 0x3F8F90
