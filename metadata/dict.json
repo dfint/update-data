@@ -93,14 +93,14 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Russian/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/cp866r.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp866.toml",
-    "checksum": 3634987184
+    "checksum": 2320850130
   },
   {
     "language": "Русский (cp1251)",
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Russian%20(cp1251)/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/cp1251.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp1251.toml",
-    "checksum": 2893685815
+    "checksum": 2867492804
   },
   {
     "language": "Türkçe",
@@ -116,7 +116,7 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Ukrainian/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/cp866u.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/cp866u.toml",
-    "checksum": 2736487028
+    "checksum": 3805875939
   },
   {
     "language": "Vietnamese",
@@ -124,7 +124,7 @@
     "csv": "https://dfint.github.io/autobuild/translation_build/csv_with_objects/Vietnamese/dfint_dictionary.csv",
     "font": "https://dfint.github.io/update-data/store/fonts/viscii.png",
     "encoding": "https://dfint.github.io/update-data/store/encodings/viscii.toml",
-    "checksum": 538382452
+    "checksum": 2753688867
   },
   {
     "language": "Japanese (Romaji)",
