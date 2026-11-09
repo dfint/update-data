@@ -27,6 +27,9 @@ on:
       - 'metadata/dict*.json'
       - '.github/workflows/update-dict-manifest.yml'
 
+permissions:
+  contents: write
+
 jobs:
   dict:
     runs-on: ubuntu-latest
@@ -50,7 +53,7 @@ jobs:
           uv run dict_manifest_generate.py
 
       - name: Commit changes
-        if: ${{ !contains(fromJSON('["push", "pull_request"]'), github.event_name) }}
+        if: ${{ github.event_name != 'pull_request' }}
         uses: EndBug/add-and-commit@v11.1.1
         with:
           author_name: github-actions[bot]
