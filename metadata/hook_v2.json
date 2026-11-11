@@ -1409,7 +1409,7 @@
   },
   {
     "df": 1793724837,
-    "checksum": 122442731,
+    "checksum": 411106676,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.17_other_win64.toml",
@@ -1425,7 +1425,7 @@
   },
   {
     "df": 1793721761,
-    "checksum": 2942113960,
+    "checksum": 1686096711,
     "lib": "https://dfint.github.io/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "https://dfint.github.io/update-data/store/config.toml",
     "offsets": "https://dfint.github.io/update-data/store/offsets/53.17_steam_win64.toml",

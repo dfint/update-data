@@ -1409,7 +1409,7 @@
   },
   {
     "df": 1793724837,
-    "checksum": 3769538952,
+    "checksum": 4284626711,
     "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "/update-data/store/config.toml",
     "offsets": "/update-data/store/offsets/53.17_other_win64.toml",
@@ -1425,7 +1425,7 @@
   },
   {
     "df": 1793721761,
-    "checksum": 1220530891,
+    "checksum": 2208104740,
     "lib": "/update-data/store/libs/hook/0.2.1/hook_0.2.1.dll",
     "config": "/update-data/store/config.toml",
     "offsets": "/update-data/store/offsets/53.17_steam_win64.toml",
